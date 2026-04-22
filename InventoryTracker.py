@@ -9,3 +9,12 @@ class InventoryTracker:
             self.inventory[name] += quantity
         else:
             self.inventory[name] = quantity
+
+    def updateStock(self, item_name, new_quantity):
+        """
+        Updates the quantity of an existing item in inventory.
+        """
+        if item_name in self.inventory:
+            self.inventory[item_name] = new_quantity
+        else:
+            print("Item not found")
